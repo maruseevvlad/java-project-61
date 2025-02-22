@@ -1,12 +1,12 @@
 package hexlet.code;
 
-import hexlet.code.games.calcGame;
-import hexlet.code.games.isEvenGame;
-import hexlet.code.games.gcdGame;
+import hexlet.code.games.*;
 
 import java.util.Scanner;
 
-public class App {
+import java.util.Arrays;
+
+public class App{
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println(
@@ -15,6 +15,7 @@ public class App {
                         "2 - Even\n " +
                         "3 - Calc\n " +
                         "4 - GCD\n " +
+                        "5 - Progression\n " +
                         "0 - Exit");
         String gameNumber = scanner.next();
 
@@ -29,6 +30,8 @@ public class App {
                 case "3" : calcGame.calc(args);
                     break;
                 case "4" : gcdGame.gcd(args);
+                    break;
+                case "5" : progressionGame.progression(args);
                     break;
                 default:
                     System.out.println("'" + gameNumber + "' " + "is wrong answer ;(.");
