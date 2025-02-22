@@ -1,5 +1,8 @@
 package hexlet.code;
 
+import hexlet.code.Engine;
+import hexlet.code.games.isEvenGame;
+
 import java.util.Scanner;
 
 public class App {
@@ -13,7 +16,7 @@ public class App {
                 case "0": System.out.println("Goodbye");
                     scanner.close();
                     break;
-                case "1": Greet.greeting(args);
+                case "1": Engine.greeting(args);
                     break;
                 case "2" : isEvenGame.isEven(args);
                     break;

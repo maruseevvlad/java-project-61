@@ -2,9 +2,9 @@ package hexlet.code;
 
 import java.util.Scanner;
 
-public class Greet {
+public class Engine {
     public static String protectedUserName = "";
-    protected static void greeting(String[] args) {
+    public static void greeting(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Welcome to the Brain Games!");

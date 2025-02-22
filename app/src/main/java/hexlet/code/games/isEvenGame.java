@@ -1,12 +1,14 @@
-package hexlet.code;
+package hexlet.code.games;
+
+import hexlet.code.Engine;
 
 import java.util.Scanner;
 
-import static hexlet.code.Greet.protectedUserName;
+import static hexlet.code.Engine.protectedUserName;
 
 public class isEvenGame {
    public static void isEven(String[] args) {
-       Greet.greeting(args);
+       Engine.greeting(args);
        var score = 0;
        while (score != 3) {
            Scanner scanner = new Scanner(System.in);
