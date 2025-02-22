@@ -2,7 +2,7 @@ package hexlet.code;
 
 import java.util.Scanner;
 
-import static hexlet.code.Greet.globalUserName;
+import static hexlet.code.Greet.protectedUserName;
 
 public class isEvenGame {
    public static void isEven(String[] args) {
@@ -30,11 +30,11 @@ public class isEvenGame {
                score++;
                System.out.println("Correct!");
            } else {
-               System.out.println("'" + answer + "' " + "is wrong answer ;(. Correct answer. was " + "'" + correctAnswer + "'.\n Let's try again " + globalUserName + "!");
+               System.out.println("'" + answer + "' " + "is wrong answer ;(. Correct answer. was " + "'" + correctAnswer + "'.\n Let's try again " + protectedUserName + "!");
                break;
            }
            if (score == 3) {
-               System.out.println("Congratulations, " + globalUserName + "!");
+               System.out.println("Congratulations, " + protectedUserName + "!");
                break;
            }
        }
