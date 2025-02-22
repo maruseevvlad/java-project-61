@@ -4,7 +4,7 @@ import hexlet.code.Engine;
 
 import java.util.Scanner;
 
-public class calcGame extends hexlet.code.Engine {
+public class CalcGame extends hexlet.code.Engine {
     public static void calc(String[] args) {
         Engine.greeting(args);
 

@@ -11,7 +11,7 @@ public class Engine {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Welcome to the Brain Games!");
-        System.out.println("May I have your name? ");
+        System.out.print("May I have your name? ");
         String userName = scanner.next();
         protectedUserName = userName;
         System.out.println("Hello, " + userName + "!");
@@ -24,7 +24,7 @@ public class Engine {
                 System.out.println("Correct!");
                 userCount++;
             } else {
-                System.out.println("'" + userAnswer + "' " + "is wrong answer ;(. Correct answer. was " + "'" + correctAnswer + "'.\n Let's try again " + protectedUserName + "!");
+                System.out.println("'" + userAnswer + "' " + "is wrong answer ;(. Correct answer was " + "'" + correctAnswer + "'.\n Let's try again " + protectedUserName + "!");
                 return false;
             }
             return true;

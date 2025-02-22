@@ -4,7 +4,7 @@ import hexlet.code.Engine;
 
 import java.util.Scanner;
 
-public class isEvenGame extends hexlet.code.Engine {
+public class IsEvenGame extends hexlet.code.Engine {
    public static void isEven(String[] args) {
        Engine.greeting(args);
        while (userCount != needWins) {

@@ -4,7 +4,7 @@ import hexlet.code.Engine;
 
 import java.util.Scanner;
 
-public class gcdGame extends Engine {
+public class GcdGame extends Engine {
     public static void gcd(String[] args) {
         Engine.greeting(args);
 

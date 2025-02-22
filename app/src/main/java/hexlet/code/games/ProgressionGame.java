@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 import java.util.Arrays;
 
-public class progressionGame extends Engine {
+public class ProgressionGame extends Engine {
     public static void progression(String[] args) {
         Engine.greeting(args);
 
@@ -27,7 +27,10 @@ public class progressionGame extends Engine {
             numbers[secretNumber] = "..";
 
             System.out.println("What number is missing in the progression?\n" +
-                    "Question: " + Arrays.toString(numbers).replace("[", "").replace("]", "").replace(",", ""));
+                    "Question: " + Arrays.toString(numbers)
+                    .replace("[", "")
+                    .replace("]", "")
+                    .replace(",", ""));
             var answer = scanner.nextLine();
 
             if (Engine.isCorrect(answer, String.valueOf(correctAnswer)) == false) {
