@@ -4,10 +4,7 @@ import hexlet.code.Engine;
 
 import java.util.Scanner;
 
-import static hexlet.code.Engine.protectedUserName;
-import static hexlet.code.Engine.userCount;
-
-public class isEvenGame {
+public class isEvenGame extends hexlet.code.Engine {
    public static void isEven(String[] args) {
        Engine.greeting(args);
        while (userCount != 3) {
@@ -28,7 +25,7 @@ public class isEvenGame {
                break;
            }
 
-           if (userCount == 3) {
+           if (userCount == needWins) {
                System.out.println("Congratulations, " + protectedUserName + "!");
                break;
            }

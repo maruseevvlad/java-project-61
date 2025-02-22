@@ -4,10 +4,7 @@ import hexlet.code.Engine;
 
 import java.util.Scanner;
 
-import static hexlet.code.Engine.protectedUserName;
-import static hexlet.code.Engine.userCount;
-
-public class calcGame {
+public class calcGame extends hexlet.code.Engine {
     public static void calc(String[] args) {
         Engine.greeting(args);
 
@@ -36,7 +33,7 @@ public class calcGame {
                 break;
             }
 
-            if (userCount == 3) {
+            if (userCount == needWins) {
                 System.out.println("Congratulations, " + protectedUserName + "!");
                 break;
             }

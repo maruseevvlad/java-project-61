@@ -3,7 +3,10 @@ package hexlet.code;
 import java.util.Scanner;
 
 public class Engine {
-    public static String protectedUserName = "";
+    protected static final int needWins = 3;
+    protected static String protectedUserName = "";
+    protected static int userCount = 0; // Счёт пользователя
+
     public static void greeting(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
@@ -14,7 +17,6 @@ public class Engine {
         System.out.println("Hello, " + userName + "!");
 
     }
-    public static int userCount = 0; // Счёт пользователя
     public static boolean isCorrect(String userAnswer, String correctAnswer) {
 
             System.out.println("Your answer: " + userAnswer);
