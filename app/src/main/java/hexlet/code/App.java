@@ -15,6 +15,8 @@ public class App {
                     break;
                 case "1": Greet.greeting(args);
                     break;
+                case "2" : isEvenGame.isEven(args);
+                    break;
                 default:
                     System.out.println("'" + gameNumber + "' " + "is wrong answer ;(.");
                     scanner.close();
