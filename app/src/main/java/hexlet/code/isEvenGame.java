@@ -33,7 +33,10 @@ public class isEvenGame {
                System.out.println("'" + answer + "' " + "is wrong answer ;(. Correct answer. was " + "'" + correctAnswer + "'.\n Let's try again " + globalUserName + "!");
                break;
            }
+           if (score == 3) {
+               System.out.println("Congratulations, " + globalUserName + "!");
+               break;
+           }
        }
-       System.out.println("Congratulations, " + globalUserName + "!");
    }
 }
