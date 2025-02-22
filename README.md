@@ -29,3 +29,7 @@ https://github.com/user-attachments/assets/cbc2192f-eba0-4b2b-9688-76f52aefc16f
 https://github.com/user-attachments/assets/d9443d7a-5981-44c2-b0fa-19eedf9b5dbf
 
 
+##### isPrimeGame demonstration 
+
+![image](https://github.com/user-attachments/assets/7bae6d22-1e61-4d03-87c4-01595fc43d41)
+
