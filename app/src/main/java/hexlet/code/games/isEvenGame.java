@@ -7,7 +7,7 @@ import java.util.Scanner;
 public class isEvenGame extends hexlet.code.Engine {
    public static void isEven(String[] args) {
        Engine.greeting(args);
-       while (userCount != 3) {
+       while (userCount != needWins) {
            Scanner scanner = new Scanner(System.in);
            var questionNumber = (int)(Math.random() * 10) + 1;
            System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
