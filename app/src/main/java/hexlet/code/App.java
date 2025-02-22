@@ -24,7 +24,5 @@ public class App {
                     System.out.println("'" + gameNumber + "' " + "is wrong answer ;(.");
                     scanner.close();
             }
-
-        
     }
 }

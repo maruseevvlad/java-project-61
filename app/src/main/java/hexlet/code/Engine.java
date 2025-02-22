@@ -14,4 +14,17 @@ public class Engine {
         System.out.println("Hello, " + userName + "!");
 
     }
+    public static int userCount = 0; // Счёт пользователя
+    public static boolean isCorrect(String userAnswer, String correctAnswer) {
+
+            System.out.println("Your answer: " + userAnswer);
+            if (correctAnswer.equals(userAnswer)) {
+                System.out.println("Correct!");
+                userCount++;
+            } else {
+                System.out.println("'" + userAnswer + "' " + "is wrong answer ;(. Correct answer. was " + "'" + correctAnswer + "'.\n Let's try again " + protectedUserName + "!");
+                return false;
+            }
+            return true;
+    }
 }
