@@ -9,11 +9,10 @@ public class ProgressionGame extends Engine {
 
         while (userCount != NEEDWIN) {
             Scanner scanner = new Scanner(System.in);
-
             String[] numbers = new String[10];
-            var startNumber = (int) (Math.random() * 10 + 1);
-            var incrementNumber = (int) (Math.random() * 10 + 1);
-            var secretNumber = (int) (Math.random() * (9 - 1) + 1);
+            var startNumber = randomNumber(1, 20);
+            var incrementNumber = randomNumber(1, 20);
+            var secretNumber = randomNumber(0, 9);
             numbers[0] = String.valueOf(startNumber);
             for (int i = 1; i < numbers.length; i++) {
                 startNumber += incrementNumber;

@@ -28,4 +28,19 @@ public class Engine {
         }
         return true;
     }
+
+    public static int randomNumber(int min, int max) {
+        return (int) (Math.random() * (max - min) + min);
+    }
+
+    public static int euclideanAlgorithm(int a, int b) {
+        while (a != b) {
+            if (a > b) {
+                a = a - b;
+            } else {
+                b = b - a;
+            }
+        }
+        return a;
+    }
 }

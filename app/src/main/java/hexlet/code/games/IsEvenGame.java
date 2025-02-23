@@ -7,7 +7,7 @@ public class IsEvenGame extends hexlet.code.Engine {
         Engine.greeting(args);
         while (userCount != NEEDWIN) {
             Scanner scanner = new Scanner(System.in);
-            var questionNumber = (int) (Math.random() * 10) + 1;
+            var questionNumber = randomNumber(1, 100);
             System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
             System.out.println("Question: " + questionNumber);
             var answer = scanner.nextLine();

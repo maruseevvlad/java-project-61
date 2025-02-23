@@ -8,8 +8,8 @@ public class GcdGame extends Engine {
 
         while (userCount != NEEDWIN) {
             Scanner scanner = new Scanner(System.in);
-            var randNumber1 = (int) (Math.random() * 100) + 1;
-            var randNumber2 = (int) (Math.random() * 10) + 1;
+            var randNumber1 = randomNumber(5, 100);
+            var randNumber2 = randomNumber(1, 50);
             var correctAnswer = euclideanAlgorithm(randNumber1, randNumber2);
 
             System.out.println("Find the greatest common divisor of given numbers.\n"
@@ -29,17 +29,4 @@ public class GcdGame extends Engine {
             }
         }
     }
-
-    public static int euclideanAlgorithm(int a, int b) {
-        while (a != b) {
-            if (a > b) {
-                a = a - b;
-            } else {
-                b = b - a;
-            }
-        }
-        return a;
-    }
-
-
 }

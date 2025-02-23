@@ -7,20 +7,20 @@ public class CalcGame extends hexlet.code.Engine {
         Engine.greeting(args);
         while (userCount != NEEDWIN) {
             Scanner scanner = new Scanner(System.in);
-            var randNumber1 = (int) (Math.random() * 10) + 1;
-            var randNumber2 = (int) (Math.random() * 10) + 1;
+            var randNumber1 = randomNumber(1, 20);
+            var randNumber2 = randomNumber(1, 20);
             var randOperation = "";
             var correctAnswer = 0;
-
-            if (randNumber1 > randNumber2) {
+            var randOperationNumber = randomNumber(1, 4);
+            if (randOperationNumber == 1) {
                 randOperation = "+";
                 correctAnswer = randNumber1 + randNumber2;
-            } else if (randNumber1 < randNumber2) {
-                randOperation = "*";
-                correctAnswer = randNumber1 * randNumber2;
-            } else {
+            } else if (randOperationNumber == 2) {
                 randOperation = "-";
                 correctAnswer = randNumber1 - randNumber2;
+            } else {
+                randOperation = "*";
+                correctAnswer = randNumber1 * randNumber2;
             }
 
             System.out.println("What is the result of the expression?\n"
