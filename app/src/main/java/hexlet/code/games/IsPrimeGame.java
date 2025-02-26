@@ -5,9 +5,11 @@ import java.util.Scanner;
 public class IsPrimeGame extends Engine {
     public static void isPrime(String[] args) {
         Engine.greeting(args);
+        var minRandomNumber = 5;
+        var maxRandomNumber = 100;
         while (userCount != NEEDWIN) {
             Scanner scanner = new Scanner(System.in);
-            var questionNumber = randomNumber(5, 100);
+            var questionNumber = randomNumber(minRandomNumber, maxRandomNumber);
             System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
             System.out.println("Question: " + questionNumber);
             var answer = scanner.nextLine();

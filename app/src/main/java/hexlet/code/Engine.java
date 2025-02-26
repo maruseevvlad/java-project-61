@@ -5,6 +5,8 @@ public class Engine {
     protected static final int NEEDWIN = 3;
     protected static String protectedUserName = "";
     protected static int userCount = 0;
+    protected static int minRandomNumber = 1;
+    protected static int maxRandomNumber = 20;
 
     public static void greeting(String[] args) {
         Scanner scanner = new Scanner(System.in);

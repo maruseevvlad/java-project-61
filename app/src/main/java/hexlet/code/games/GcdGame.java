@@ -5,11 +5,11 @@ import java.util.Scanner;
 public class GcdGame extends Engine {
     public static void gcd(String[] args) {
         Engine.greeting(args);
-
+        var maxRandomNumber = 100;
         while (userCount != NEEDWIN) {
             Scanner scanner = new Scanner(System.in);
-            var randNumber1 = randomNumber(5, 100);
-            var randNumber2 = randomNumber(1, 50);
+            var randNumber1 = randomNumber(minRandomNumber, maxRandomNumber);
+            var randNumber2 = randomNumber(minRandomNumber, maxRandomNumber);
             var correctAnswer = euclideanAlgorithm(randNumber1, randNumber2);
 
             System.out.println("Find the greatest common divisor of given numbers.\n"

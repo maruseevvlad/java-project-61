@@ -7,8 +7,6 @@ public class CalcGame extends hexlet.code.Engine {
     public static void calc(String[] args) {
         Engine.greeting(args);
         String[] operationChars = {"+", "-", "*"};
-        var minRandomNumber = 1;
-        var maxRandomNumber = 20;
         while (userCount != NEEDWIN) {
             Scanner scanner = new Scanner(System.in);
             var randNumber1 = randomNumber(minRandomNumber, maxRandomNumber);
