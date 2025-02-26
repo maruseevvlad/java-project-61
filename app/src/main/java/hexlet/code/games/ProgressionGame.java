@@ -6,7 +6,7 @@ import java.util.Arrays;
 public class ProgressionGame extends Engine {
     public static void progression(String[] args) {
         Engine.greeting(args);
-        var arrayLength = 10;
+        var arrayLength = getArrayLengthProgressionGame();
         while (getUserCount() != NEEDWIN) {
             Scanner scanner = new Scanner(System.in);
 
