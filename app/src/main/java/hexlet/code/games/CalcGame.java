@@ -7,10 +7,10 @@ public class CalcGame extends hexlet.code.Engine {
     public static void calc(String[] args) {
         Engine.greeting(args);
         String[] operationChars = {"+", "-", "*"};
-        while (userCount != NEEDWIN) {
+        while (getUserCount() != NEEDWIN) {
             Scanner scanner = new Scanner(System.in);
-            var randNumber1 = randomNumber(minRandomNumber, maxRandomNumber);
-            var randNumber2 = randomNumber(minRandomNumber, maxRandomNumber);
+            var randNumber1 = randomNumber(getMIN(), getMAX());
+            var randNumber2 = randomNumber(getMIN(), getMAX());
             var correctAnswer = 0;
             Random rand = new Random();
             var randOperationChar = operationChars[rand.nextInt(operationChars.length)];
@@ -38,8 +38,8 @@ public class CalcGame extends hexlet.code.Engine {
                 break;
             }
 
-            if (userCount == NEEDWIN) {
-                System.out.println("Congratulations, " + protectedUserName + "!");
+            if (getUserCount() == NEEDWIN) {
+                System.out.println("Congratulations, " + getProtectedUserName() + "!");
                 break;
             }
         }

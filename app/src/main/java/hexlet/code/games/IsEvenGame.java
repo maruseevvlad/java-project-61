@@ -5,9 +5,9 @@ import java.util.Scanner;
 public class IsEvenGame extends hexlet.code.Engine {
     public static void isEven(String[] args) {
         Engine.greeting(args);
-        while (userCount != NEEDWIN) {
+        while (getUserCount() != NEEDWIN) {
             Scanner scanner = new Scanner(System.in);
-            var questionNumber = randomNumber(1, 100);
+            var questionNumber = randomNumber(getMIN(), getMAX());
             System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
             System.out.println("Question: " + questionNumber);
             var answer = scanner.nextLine();
@@ -23,8 +23,8 @@ public class IsEvenGame extends hexlet.code.Engine {
                 break;
             }
 
-            if (userCount == NEEDWIN) {
-                System.out.println("Congratulations, " + protectedUserName + "!");
+            if (getUserCount() == NEEDWIN) {
+                System.out.println("Congratulations, " + getProtectedUserName() + "!");
                 break;
             }
         }

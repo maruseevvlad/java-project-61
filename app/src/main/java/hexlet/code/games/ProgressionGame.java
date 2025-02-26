@@ -7,13 +7,12 @@ public class ProgressionGame extends Engine {
     public static void progression(String[] args) {
         Engine.greeting(args);
         var arrayLength = 10;
-        var maxRandomNumber = 20;
-        while (userCount != NEEDWIN) {
+        while (getUserCount() != NEEDWIN) {
             Scanner scanner = new Scanner(System.in);
 
             String[] numbers = new String[arrayLength];
-            var startNumber = randomNumber(1, maxRandomNumber);
-            var incrementNumber = randomNumber(1, maxRandomNumber);
+            var startNumber = randomNumber(1, getMAX());
+            var incrementNumber = randomNumber(1, getMAX());
             var secretNumber = randomNumber(0, arrayLength - 1);
             numbers[0] = String.valueOf(startNumber);
             for (int i = 1; i < numbers.length; i++) {
@@ -36,8 +35,8 @@ public class ProgressionGame extends Engine {
                 break;
             }
 
-            if (userCount == NEEDWIN) {
-                System.out.println("Congratulations, " + protectedUserName + "!");
+            if (getUserCount() == NEEDWIN) {
+                System.out.println("Congratulations, " + getProtectedUserName() + "!");
                 break;
             }
         }
