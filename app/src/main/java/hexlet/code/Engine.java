@@ -7,7 +7,7 @@ public class Engine {
     private static int userCount = 0;
     private static final int MIN = 10;
     private static final int MAX = 30;
-    private static final int arrayLengthProgressionGame = 10;
+    private static final int ARRAYLENGTHPROGRESSIONGAME = 10;
 
     public static int getMIN() {
         return MAX;
@@ -26,7 +26,7 @@ public class Engine {
     }
 
     public static int getArrayLengthProgressionGame() {
-        return arrayLengthProgressionGame;
+        return ARRAYLENGTHPROGRESSIONGAME;
     }
 
     public static void greeting(String[] args) {
