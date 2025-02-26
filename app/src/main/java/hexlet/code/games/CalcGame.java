@@ -1,25 +1,29 @@
 package hexlet.code.games;
 import hexlet.code.Engine;
 import java.util.Scanner;
+import java.util.Random;
 
 public class CalcGame extends hexlet.code.Engine {
     public static void calc(String[] args) {
         Engine.greeting(args);
+        String[] operationChars = {"+", "-", "*"};
+        var minRandomNumber = 1;
+        var maxRandomNumber = 20;
         while (userCount != NEEDWIN) {
             Scanner scanner = new Scanner(System.in);
-            var randNumber1 = randomNumber(1, 20);
-            var randNumber2 = randomNumber(1, 20);
-            var randOperation = "";
+            var randNumber1 = randomNumber(minRandomNumber, maxRandomNumber);
+            var randNumber2 = randomNumber(minRandomNumber, maxRandomNumber);
             var correctAnswer = 0;
-            var randOperationNumber = randomNumber(1, 4);
-            if (randOperationNumber == 1) {
-                randOperation = "+";
+            Random rand = new Random();
+            var randOperationChar = operationChars[rand.nextInt(operationChars.length)];
+            if (randOperationChar.equals("+")) {
+                randOperationChar = "+";
                 correctAnswer = randNumber1 + randNumber2;
-            } else if (randOperationNumber == 2) {
-                randOperation = "-";
+            } else if (randOperationChar.equals("-")) {
+                randOperationChar = "-";
                 correctAnswer = randNumber1 - randNumber2;
             } else {
-                randOperation = "*";
+                randOperationChar.equals("*");
                 correctAnswer = randNumber1 * randNumber2;
             }
 
@@ -27,7 +31,7 @@ public class CalcGame extends hexlet.code.Engine {
                     + "Question: "
                     + randNumber1
                     + " "
-                    + randOperation
+                    + randOperationChar
                     +  " "
                     + randNumber2);
             var answer = scanner.nextLine();

@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class Engine {
     protected static final int NEEDWIN = 3;
     protected static String protectedUserName = "";
-    protected static int userCount = 0; // Счёт пользователя
+    protected static int userCount = 0;
 
     public static void greeting(String[] args) {
         Scanner scanner = new Scanner(System.in);
