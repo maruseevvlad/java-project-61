@@ -6,8 +6,9 @@ import java.util.Arrays;
 public class ProgressionGame extends Engine {
     public static void progression(String[] args) {
         Engine.greeting(args);
+        String[][] answersQuestions = new String[answersCount][answerQuestionCount];
         var arrayLength = getArrayLengthProgressionGame();
-        while (getUserCount() != NEEDWIN) {
+        for (var i = 0; i < answersQuestions.length; i++) {
             Scanner scanner = new Scanner(System.in);
 
             String[] numbers = new String[arrayLength];
@@ -15,30 +16,23 @@ public class ProgressionGame extends Engine {
             var incrementNumber = randomNumber(1, getMAX());
             var secretNumber = randomNumber(0, arrayLength - 1);
             numbers[0] = String.valueOf(startNumber);
-            for (int i = 1; i < numbers.length; i++) {
+            for (int j = 1; j < numbers.length; j++) {
                 startNumber += incrementNumber;
-                numbers[i] = String.valueOf(startNumber);
+                numbers[j] = String.valueOf(startNumber);
             }
 
             var correctAnswer = numbers[secretNumber];
             numbers[secretNumber] = "..";
 
-            System.out.println("What number is missing in the progression?\n"
+            answersQuestions[i][0] = "What number is missing in the progression?\n"
                     + "Question: "
                     + Arrays.toString(numbers)
                     .replace("[", "")
                     .replace("]", "")
-                    .replace(",", ""));
-            var answer = scanner.nextLine();
+                    .replace(",", "");
 
-            if (!Engine.isCorrect(answer, String.valueOf(correctAnswer))) {
-                break;
-            }
-
-            if (getUserCount() == NEEDWIN) {
-                System.out.println("Congratulations, " + getProtectedUserName() + "!");
-                break;
-            }
+            answersQuestions[i][1] = correctAnswer;
         }
+        isCorrect(answersQuestions);
     }
 }

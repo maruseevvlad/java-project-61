@@ -5,12 +5,12 @@ import java.util.Scanner;
 public class IsEvenGame extends hexlet.code.Engine {
     public static void isEven(String[] args) {
         Engine.greeting(args);
-        while (getUserCount() != NEEDWIN) {
+        String[][] answersQuestions = new String[answersCount][answerQuestionCount];
+        for (var i = 0; i < answersQuestions.length; i++) {
             Scanner scanner = new Scanner(System.in);
             var questionNumber = randomNumber(getMIN(), getMAX());
-            System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
-            System.out.println("Question: " + questionNumber);
-            var answer = scanner.nextLine();
+            answersQuestions[i][0] = "Answer 'yes' if the number is even, otherwise answer 'no'.\n"
+            + "Question: " + questionNumber;
             var correctAnswer = "";
 
             if (questionNumber % 2 == 0) {
@@ -18,15 +18,8 @@ public class IsEvenGame extends hexlet.code.Engine {
             } else {
                 correctAnswer = "no";
             }
-
-            if (!Engine.isCorrect(answer, String.valueOf(correctAnswer))) {
-                break;
-            }
-
-            if (getUserCount() == NEEDWIN) {
-                System.out.println("Congratulations, " + getProtectedUserName() + "!");
-                break;
-            }
+            answersQuestions[i][1] = correctAnswer;
         }
+        isCorrect(answersQuestions);
     }
 }

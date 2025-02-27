@@ -5,31 +5,25 @@ import java.util.Scanner;
 public class IsPrimeGame extends Engine {
     public static void isPrime(String[] args) {
         Engine.greeting(args);
-        while (getUserCount() != NEEDWIN) {
+        String[][] answersQuestions = new String[answersCount][answerQuestionCount];
+        for (var i = 0; i < answersQuestions.length; i++) {
             Scanner scanner = new Scanner(System.in);
             var questionNumber = randomNumber(getMIN(), getMAX());
-            System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
-            System.out.println("Question: " + questionNumber);
+            answersQuestions[i][0] = "Answer 'yes' if given number is prime. Otherwise answer 'no'.\n"
+            + "Question: " + questionNumber;
             var answer = scanner.nextLine();
             var correctAnswer = "";
 
-            for (int i = 2; i <= questionNumber / 2; i++) {
-                if (questionNumber % i == 0) {
+            for (int j = 2; j <= questionNumber / 2; j++) {
+                if (questionNumber % j == 0) {
                     correctAnswer = "no";
                     break;
                 } else {
                     correctAnswer = "yes";
                 }
             }
-
-            if (!Engine.isCorrect(answer, correctAnswer)) {
-                break;
-            }
-
-            if (getUserCount() == NEEDWIN) {
-                System.out.println("Congratulations, " + getProtectedUserName() + "!");
-                break;
-            }
+            answersQuestions[i][1] = correctAnswer;
         }
+        isCorrect(answersQuestions);
     }
 }

@@ -7,8 +7,9 @@ import java.util.Random;
 public class CalcGame extends hexlet.code.Engine {
     public static void calc(String[] args) {
         Engine.greeting(args);
+        String[][] answersQuestions = new String[answersCount][answerQuestionCount];
         String[] operationChars = {"+", "-", "*"};
-        while (getUserCount() != NEEDWIN) {
+        for (var i = 0; i < answersQuestions.length; i++) {
             Scanner scanner = new Scanner(System.in);
             var randNumber1 = randomNumber(getMIN(), getMAX());
             var randNumber2 = randomNumber(getMIN(), getMAX());
@@ -30,23 +31,15 @@ public class CalcGame extends hexlet.code.Engine {
                 }
                 default -> correctAnswer;
             };
-            System.out.println("What is the result of the expression?\n"
+            answersQuestions[i][0] = String.valueOf("What is the result of the expression?\n"
                     + "Question: "
                     + randNumber1
                     + " "
                     + randOperationChar
                     +  " "
                     + randNumber2);
-            var answer = scanner.nextLine();
-
-            if (!Engine.isCorrect(answer, String.valueOf(correctAnswer))) {
-                break;
-            }
-
-            if (getUserCount() == NEEDWIN) {
-                System.out.println("Congratulations, " + getProtectedUserName() + "!");
-                break;
-            }
+            answersQuestions[i][1] = String.valueOf(correctAnswer);
         }
+        isCorrect(answersQuestions);
     }
 }
