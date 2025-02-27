@@ -6,7 +6,7 @@ import java.util.Arrays;
 public class ProgressionGame extends Engine {
     public static void progression(String[] args) {
         Engine.greeting(args);
-        String[][] answersQuestions = new String[answersCount][answerQuestionCount];
+        String[][] answersQuestions = new String[answersCount][ANSWERQUESTIONCOUNT];
         var arrayLength = getArrayLengthProgressionGame();
         for (var i = 0; i < answersQuestions.length; i++) {
             Scanner scanner = new Scanner(System.in);

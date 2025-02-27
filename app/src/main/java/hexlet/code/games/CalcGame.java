@@ -7,7 +7,7 @@ import java.util.Random;
 public class CalcGame extends hexlet.code.Engine {
     public static void calc(String[] args) {
         Engine.greeting(args);
-        String[][] answersQuestions = new String[answersCount][answerQuestionCount];
+        String[][] answersQuestions = new String[answersCount][ANSWERQUESTIONCOUNT];
         String[] operationChars = {"+", "-", "*"};
         for (var i = 0; i < answersQuestions.length; i++) {
             Scanner scanner = new Scanner(System.in);

@@ -1,28 +1,23 @@
 package hexlet.code;
 import java.util.Scanner;
 
-public class Engine extends Utils{
+public class Engine extends Utils {
     protected static final int NEEDWIN = 3;
     private static String protectedUserName = "";
-    private static int userCount = 0;
     private static final int ARRAYLENGTHPROGRESSIONGAME = 10;
     public static int answersCount = 3;
-    public static final int answerQuestionCount = 2;
+    public static final int ANSWERQUESTIONCOUNT = 2;
 
     public static int getAnswersCount() {
         return answersCount;
     }
 
-    public static int getAnswerQuestionCount() {
-        return answerQuestionCount;
+    public static int getANSWERQUESTIONCOUNT() {
+        return ANSWERQUESTIONCOUNT;
     }
 
     public static String getProtectedUserName() {
         return protectedUserName;
-    }
-
-    public static int getUserCount() {
-        return userCount;
     }
 
     public static int getArrayLengthProgressionGame() {
@@ -48,7 +43,7 @@ public class Engine extends Utils{
             if (answer.equals(answersQuestions[i][1])) {
                 System.out.println("Correct!");
                 userCount++;
-                if (userCount == NEEDWIN){
+                if (userCount == NEEDWIN) {
                     System.out.println("Congratulations, " + protectedUserName + "!");
                 }
             } else {
