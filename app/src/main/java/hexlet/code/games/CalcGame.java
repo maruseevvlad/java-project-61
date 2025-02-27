@@ -1,3 +1,4 @@
+
 package hexlet.code.games;
 import hexlet.code.Engine;
 import java.util.Scanner;
@@ -14,17 +15,21 @@ public class CalcGame extends hexlet.code.Engine {
             var correctAnswer = 0;
             Random rand = new Random();
             var randOperationChar = operationChars[rand.nextInt(operationChars.length)];
-            if (randOperationChar.equals("+")) {
-                randOperationChar = "+";
-                correctAnswer = randNumber1 + randNumber2;
-            } else if (randOperationChar.equals("-")) {
-                randOperationChar = "-";
-                correctAnswer = randNumber1 - randNumber2;
-            } else {
-                randOperationChar.equals("*");
-                correctAnswer = randNumber1 * randNumber2;
-            }
-
+            correctAnswer = switch (randOperationChar) {
+                case "+" -> {
+                    randOperationChar = "+";
+                    yield randNumber1 + randNumber2;
+                }
+                case "-" -> {
+                    randOperationChar = "-";
+                    yield randNumber1 - randNumber2;
+                }
+                case "*" -> {
+                    randOperationChar = "*";
+                    yield randNumber1 * randNumber2;
+                }
+                default -> correctAnswer;
+            };
             System.out.println("What is the result of the expression?\n"
                     + "Question: "
                     + randNumber1
@@ -44,5 +49,4 @@ public class CalcGame extends hexlet.code.Engine {
             }
         }
     }
-
 }

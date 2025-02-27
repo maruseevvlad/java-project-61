@@ -1,5 +1,4 @@
 package hexlet.code;
-//import hexlet.code.games.*;
 import hexlet.code.games.GcdGame;
 import hexlet.code.games.CalcGame;
 import hexlet.code.games.IsEvenGame;

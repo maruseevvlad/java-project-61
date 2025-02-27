@@ -1,21 +1,11 @@
 package hexlet.code;
 import java.util.Scanner;
 
-public class Engine {
+public class Engine extends Utils{
     protected static final int NEEDWIN = 3;
     private static String protectedUserName = "";
     private static int userCount = 0;
-    private static final int MIN = 10;
-    private static final int MAX = 30;
     private static final int ARRAYLENGTHPROGRESSIONGAME = 10;
-
-    public static int getMIN() {
-        return MAX;
-    }
-
-    public static int getMAX() {
-        return MIN;
-    }
 
     public static String getProtectedUserName() {
         return protectedUserName;
@@ -50,20 +40,5 @@ public class Engine {
             return false;
         }
         return true;
-    }
-
-    public static int randomNumber(int min, int max) {
-        return (int) (Math.random() * (max - min) + min);
-    }
-
-    public static int euclideanAlgorithm(int a, int b) {
-        while (a != b) {
-            if (a > b) {
-                a = a - b;
-            } else {
-                b = b - a;
-            }
-        }
-        return a;
     }
 }
