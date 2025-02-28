@@ -1,7 +1,6 @@
 
 package hexlet.code.games;
 import hexlet.code.Engine;
-import java.util.Scanner;
 import java.util.Random;
 
 public class CalcGame extends hexlet.code.Engine {
@@ -10,7 +9,6 @@ public class CalcGame extends hexlet.code.Engine {
         String[][] answersQuestions = new String[answersCount][ANSWERQUESTIONCOUNT];
         String[] operationChars = {"+", "-", "*"};
         for (var i = 0; i < answersQuestions.length; i++) {
-            Scanner scanner = new Scanner(System.in);
             var randNumber1 = randomNumber(getMIN(), getMAX());
             var randNumber2 = randomNumber(getMIN(), getMAX());
             var correctAnswer = 0;

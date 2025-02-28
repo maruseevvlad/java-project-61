@@ -1,6 +1,5 @@
 package hexlet.code.games;
 import hexlet.code.Engine;
-import java.util.Scanner;
 import java.util.Arrays;
 
 public class ProgressionGame extends Engine {
@@ -9,7 +8,6 @@ public class ProgressionGame extends Engine {
         String[][] answersQuestions = new String[answersCount][ANSWERQUESTIONCOUNT];
         var arrayLength = getArrayLengthProgressionGame();
         for (var i = 0; i < answersQuestions.length; i++) {
-            Scanner scanner = new Scanner(System.in);
 
             String[] numbers = new String[arrayLength];
             var startNumber = randomNumber(1, getMAX());

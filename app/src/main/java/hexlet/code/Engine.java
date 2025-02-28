@@ -8,18 +8,6 @@ public class Engine extends Utils {
     public static int answersCount = 3;
     public static final int ANSWERQUESTIONCOUNT = 2;
 
-    public static int getAnswersCount() {
-        return answersCount;
-    }
-
-    public static int getANSWERQUESTIONCOUNT() {
-        return ANSWERQUESTIONCOUNT;
-    }
-
-    public static String getProtectedUserName() {
-        return protectedUserName;
-    }
-
     public static int getArrayLengthProgressionGame() {
         return ARRAYLENGTHPROGRESSIONGAME;
     }
@@ -45,6 +33,7 @@ public class Engine extends Utils {
                 userCount++;
                 if (userCount == NEEDWIN) {
                     System.out.println("Congratulations, " + protectedUserName + "!");
+                    break;
                 }
             } else {
                 System.out.println("'" + answer + "' "
