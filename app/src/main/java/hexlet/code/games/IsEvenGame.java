@@ -1,12 +1,13 @@
 package hexlet.code.games;
 import hexlet.code.Engine;
+import hexlet.code.Utils;
 
-public class IsEvenGame extends hexlet.code.Engine {
+public class IsEvenGame {
     public static void isEven(String[] args) {
         Engine.greeting(args);
-        String[][] answersQuestions = new String[answersCount][ANSWERQUESTIONCOUNT];
+        String[][] answersQuestions = new String[Engine.answersCount][Engine.ANSWERQUESTIONCOUNT];
         for (var i = 0; i < answersQuestions.length; i++) {
-            var questionNumber = randomNumber(getMIN(), getMAX());
+            var questionNumber = Utils.randomNumber(Utils.getMIN(), Utils.getMAX());
             answersQuestions[i][0] = "Answer 'yes' if the number is even, otherwise answer 'no'.\n"
                 + "Question: " + questionNumber;
             var correctAnswer = "";
@@ -18,6 +19,6 @@ public class IsEvenGame extends hexlet.code.Engine {
             }
             answersQuestions[i][1] = correctAnswer;
         }
-        isCorrect(answersQuestions);
+        Engine.isCorrect(answersQuestions);
     }
 }

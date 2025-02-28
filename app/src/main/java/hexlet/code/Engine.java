@@ -1,7 +1,7 @@
 package hexlet.code;
 import java.util.Scanner;
 
-public class Engine extends Utils {
+public class Engine {
     protected static final int NEEDWIN = 3;
     private static String protectedUserName = "";
     private static final int ARRAYLENGTHPROGRESSIONGAME = 10;

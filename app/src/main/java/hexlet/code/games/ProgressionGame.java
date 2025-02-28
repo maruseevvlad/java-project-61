@@ -1,18 +1,19 @@
 package hexlet.code.games;
 import hexlet.code.Engine;
 import java.util.Arrays;
+import hexlet.code.Utils;
 
-public class ProgressionGame extends Engine {
+public class ProgressionGame {
     public static void progression(String[] args) {
         Engine.greeting(args);
-        String[][] answersQuestions = new String[answersCount][ANSWERQUESTIONCOUNT];
-        var arrayLength = getArrayLengthProgressionGame();
+        String[][] answersQuestions = new String[Engine.answersCount][Engine.ANSWERQUESTIONCOUNT];
+        var arrayLength = Engine.getArrayLengthProgressionGame();
         for (var i = 0; i < answersQuestions.length; i++) {
 
             String[] numbers = new String[arrayLength];
-            var startNumber = randomNumber(1, getMAX());
-            var incrementNumber = randomNumber(1, getMAX());
-            var secretNumber = randomNumber(0, arrayLength - 1);
+            var startNumber = Utils.randomNumber(1, Utils.getMAX());
+            var incrementNumber = Utils.randomNumber(1, Utils.getMAX());
+            var secretNumber = Utils.randomNumber(0, arrayLength - 1);
             numbers[0] = String.valueOf(startNumber);
             for (int j = 1; j < numbers.length; j++) {
                 startNumber += incrementNumber;
@@ -31,6 +32,6 @@ public class ProgressionGame extends Engine {
 
             answersQuestions[i][1] = correctAnswer;
         }
-        isCorrect(answersQuestions);
+        Engine.isCorrect(answersQuestions);
     }
 }

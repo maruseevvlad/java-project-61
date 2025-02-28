@@ -1,16 +1,18 @@
 
 package hexlet.code.games;
 import hexlet.code.Engine;
+import hexlet.code.Utils;
+
 import java.util.Random;
 
-public class CalcGame extends hexlet.code.Engine {
+public class CalcGame {
     public static void calc(String[] args) {
         Engine.greeting(args);
-        String[][] answersQuestions = new String[answersCount][ANSWERQUESTIONCOUNT];
+        String[][] answersQuestions = new String[Engine.answersCount][Engine.ANSWERQUESTIONCOUNT];
         String[] operationChars = {"+", "-", "*"};
         for (var i = 0; i < answersQuestions.length; i++) {
-            var randNumber1 = randomNumber(getMIN(), getMAX());
-            var randNumber2 = randomNumber(getMIN(), getMAX());
+            var randNumber1 = Utils.randomNumber(Utils.getMIN(), Utils.getMAX());
+            var randNumber2 = Utils.randomNumber(Utils.getMIN(), Utils.getMAX());
             var correctAnswer = 0;
             Random rand = new Random();
             var randOperationChar = operationChars[rand.nextInt(operationChars.length)];
@@ -38,6 +40,6 @@ public class CalcGame extends hexlet.code.Engine {
                     + randNumber2);
             answersQuestions[i][1] = String.valueOf(correctAnswer);
         }
-        isCorrect(answersQuestions);
+        Engine.isCorrect(answersQuestions);
     }
 }
