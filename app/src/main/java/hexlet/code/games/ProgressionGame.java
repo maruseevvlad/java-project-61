@@ -6,7 +6,7 @@ import hexlet.code.Utils;
 public class ProgressionGame {
     public static void progression(String[] args) {
         Engine.greeting(args);
-        String[][] answersQuestions = new String[Engine.answersCount][Engine.ANSWERQUESTIONCOUNT];
+        String[][] answersQuestions = new String[Engine.getAnswercount()][Engine.ANSWERQUESTIONCOUNT];
         var arrayLength = Engine.getArrayLengthProgressionGame();
         for (var i = 0; i < answersQuestions.length; i++) {
 

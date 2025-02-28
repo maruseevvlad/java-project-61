@@ -8,7 +8,7 @@ import java.util.Random;
 public class CalcGame {
     public static void calc(String[] args) {
         Engine.greeting(args);
-        String[][] answersQuestions = new String[Engine.answersCount][Engine.ANSWERQUESTIONCOUNT];
+        String[][] answersQuestions = new String[Engine.getAnswercount()][Engine.ANSWERQUESTIONCOUNT];
         String[] operationChars = {"+", "-", "*"};
         for (var i = 0; i < answersQuestions.length; i++) {
             var randNumber1 = Utils.randomNumber(Utils.getMIN(), Utils.getMAX());

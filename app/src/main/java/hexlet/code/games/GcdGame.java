@@ -5,7 +5,7 @@ import hexlet.code.Utils;
 public class GcdGame {
     public static void gcd(String[] args) {
         Engine.greeting(args);
-        String[][] answersQuestions = new String[Engine.answersCount][Engine.ANSWERQUESTIONCOUNT];
+        String[][] answersQuestions = new String[Engine.getAnswercount()][Engine.ANSWERQUESTIONCOUNT];
         for (var i = 0; i < answersQuestions.length; i++) {
             var randNumber1 = Utils.randomNumber(Utils.getMIN(), Utils.getMAX());
             var randNumber2 = Utils.randomNumber(Utils.getMIN(), Utils.getMAX());

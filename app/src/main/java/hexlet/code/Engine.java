@@ -5,11 +5,15 @@ public class Engine {
     protected static final int NEEDWIN = 3;
     private static String protectedUserName = "";
     private static final int ARRAYLENGTHPROGRESSIONGAME = 10;
-    public static int answersCount = 3;
+    private static final int ANSWERCOUNT = 3;
     public static final int ANSWERQUESTIONCOUNT = 2;
 
     public static int getArrayLengthProgressionGame() {
         return ARRAYLENGTHPROGRESSIONGAME;
+    }
+
+    public static int getAnswercount() {
+        return ANSWERCOUNT;
     }
 
     public static void greeting(String[] args) {

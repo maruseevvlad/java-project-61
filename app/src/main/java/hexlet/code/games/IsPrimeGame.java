@@ -5,7 +5,7 @@ import hexlet.code.Utils;
 public class IsPrimeGame {
     public static void isPrime(String[] args) {
         Engine.greeting(args);
-        String[][] answersQuestions = new String[Engine.answersCount][Engine.ANSWERQUESTIONCOUNT];
+        String[][] answersQuestions = new String[Engine.getAnswercount()][Engine.ANSWERQUESTIONCOUNT];
         for (var i = 0; i < answersQuestions.length; i++) {
             var questionNumber = Utils.randomNumber(Utils.getMIN(), Utils.getMAX());
             answersQuestions[i][0] = "Answer 'yes' if given number is prime. Otherwise answer 'no'.\n"
